@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Management System - Transaction Pin Change</title>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/setting.css')}}">
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo"><img src="{{url_for('static', filename = 'images/logo.png')}}" alt="Nazar Bank Logo"> Nazar Bank</div>
+            <nav>
+                <ul>
+                    <li><a href="{{url_for('view.userDash')}}"><i class="fa-solid fa-house"></i>Home</a></li>
+                    <li><a href="accounts.html"><i class="fa-solid fa-file-invoice-dollar"></i>Accounts</a></li>
+                    <li><a href="{{url_for('view.deposite')}}"><i class="fa-solid fa-money-bills"></i>Deposit</a></li>
+                    <li><a href="{{url_for('view.Transac')}}"><i class="fa-solid fa-money-bill-transfer"></i>Transfer</a></li>
+                    <li><a href="#"><i class="fa-solid fa-credit-card"></i>Cards</a></li>
+                    <li><a href="{{url_for('view.setting')}}"><i class="fa-solid fa-gear"></i>Settings</a></li>
+                    <li><a href="support.html"><i class="fa-solid fa-phone"></i>Support</a></li>
+                    <li><a href="{{url_for('auth.logout')}}"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+        <main>
+            <h2>Transaction Pin</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="transaction-pin">Change Transaction Pin</label>
+                    <input type="password" id="transaction-pin" name="transaction-pin" placeholder="Enter new transaction pin" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+    
+                    
+                </div>
+                <button type="submit">Change</button>
+            </form>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 Nazar Bank. All rights reserved.</p>
+    </footer>
+    <script src="{{url_for('static', filename = 'js/script.js')}}"></script>
+</body>
+
+</html>

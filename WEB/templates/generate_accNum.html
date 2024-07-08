@@ -1,0 +1,12 @@
+{%extends "base.html"%}
+{%block title%}Accout Number{%endblock%}
+{%block a%}User Account Number{%endblock%}
+{%block content%}
+
+<form action="account_number" method="post">
+    <input type="text" value="{{value}}" name="acc" readonly/>
+    <input type="submit" placeholder="" value="Proceed" />
+</form>
+
+
+{%endblock%}

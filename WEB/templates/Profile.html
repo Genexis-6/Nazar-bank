@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Management System - Profile Page</title>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/setting.css')}}">
+    <script src="https://kit.fontawesome.com/c6527d409e.js" crossorigin="anonymous"></script>
+</head>
+<!-- EJIFORMAH OMAMEKPE FAVOUR -->
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo"><img src="{{url_for('static', filename = 'images/logo.png')}}" alt="Nazar Bank Logo"> Nazar Bank</div>
+            <nav>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
+                    <li><a href="{{url_for('view.accountNum')}}"><i class="fa-solid fa-file-invoice-dollar"></i>Accounts</a></li>
+                    <li><a href="{{url_for('view.deposite')}}"><i class="fa-solid fa-money-bills"></i>Deposit</a></li>
+                    <li><a href="{{url_for('view.Transac')}}"><i class="fa-solid fa-money-bill-transfer"></i>Transfer</a></li>
+                    <li><a href="#"><i class="fa-solid fa-credit-card"></i>Cards</a></li>
+                    <li><a href="{{url_for('view.setting')}}"><i class="fa-solid fa-gear"></i>Settings</a></li>
+                    <li><a href="support.html"><i class="fa-solid fa-phone"></i>Support</a></li>
+                    <li><a href="{{url_for('auth.logout')}}"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+        <main>
+            <h2>PROFILE</h2><!-- EJIFORMAH OMAMEKPE FAVOUR -->
+            <ul>
+                {%block content%}
+                <li><a href="{{url_for('view.username')}}"><i class="fa-solid fa-user"></i>USERNAME <span>Change</span></a></li>
+                <li><a href="{{url_for('view.password')}}"><i class="fa-solid fa-fingerprint"></i>PASSWORD <span>Change</span></a></li>
+                <li><a href="{{url_for('view.transaction_pin')}}"><i class="fa-solid fa-palette"></i>TRANSACTION PIN <span>Change</span></a></li>
+                {%endblock%}
+            </ul>
+        </main><!-- EJIFORMAH OMAMEKPE FAVOUR -->
+    </div>
+    <footer>
+        <p>&copy; 2024 Nazar Bank. All rights reserved.</p>
+    </footer>
+    <script src="{{url_for('static', filename = 'js/script.js')}}"></script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin</title>
+<link rel="stylesheet" href="{{url_for('static', filename = 'css/admin.css')}}">
+</head>
+<body>
+
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        {%for user in user%}
+        <div class="item">
+            <form method="post", id = 'form'action = '#'>
+                <fieldset>
+                    <legend>User</legend>
+                    <img src="{{url_for('static', filename = 'images/admin.jpeg')}}" alt="">
+                    <input type="text" id="name1" value="{{user.username}}" readonly>
+                    <br>
+                    <label for="account1">Account Number:</label>
+                    <input type="text" id="account1" value="{{user.accnum}}" readonly>
+                    <br>
+                    <input type="hidden" name="userID" value="{{user.id}}">
+                    <button onclick="setValueAndSubmit('{{user.id}}')"  type="submit" >Acess Details</button>
+                </fieldset>
+            </form>
+        </div>
+        {%endfor%}
+    </div>
+    <script src="{{ url_for('static', filename='adm.js') }}"></script>
+</body>
+</html>

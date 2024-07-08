@@ -1,0 +1,28 @@
+{%extends 'userpage.html'%}
+{%block content%}
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename= 'css/deposite.css')}}">
+</head>
+
+<body>
+<div style="margin-top: 50;">
+    <div class="container" >
+        <div class="form-box" >
+            <div id = 'content'>
+                <form action="">
+                <input type="text" value="{{name}}" name="name" readonly/>
+                    <input type="text" value="{{accnum}}" name="acc" readonly/>
+                    <input type="number" value="" name="amount" placeholder="Amount" />
+                    <input type="password"  name="password" placeholder="Password" />
+                    <input type="submit" placeholder="" value="Confirm" />
+                </form>
+        
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+</body>
+
+
+{%endblock%}

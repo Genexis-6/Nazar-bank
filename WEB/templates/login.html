@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+{%block a%}Login{%endblock%}
+{%block content%}
+
+<form action="#" method="post">
+                
+    <input type="email" placeholder="Email Address" name="EA" value="{{email}}"/>
+    <input type="password" placeholder="Password" name="PD"/>
+    <input type="submit" value="Login" class="btn" />
+    <a href="{{url_for('auth.forgotPass')}}" class="pass-link">Forgot Password</a>
+    <p>Don't have an account? <a href="{{url_for('auth.register')}}">Signup Here</a></p>
+    
+
+</form>
+{%endblock%}

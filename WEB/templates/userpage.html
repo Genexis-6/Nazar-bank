@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Dashboard</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/dashboard.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/default_message.css')}}">
+   
+    <script src="https://kit.fontawesome.com/c6527d409e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo"><img src="{{url_for('static',filename='images/Logo.png')}}" alt="Nazar Bank Logo"> Nazar Bank</div>
+        <nav>
+            <ul>
+                <li><a href="{{url_for('view.home')}}"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="{{url_for('view.displayCard')}}"><i class="fa-solid fa-credit-card"></i>Cards</a></li>
+                <li><a href="{{url_for('view.setting')}}"><i class="fa-solid fa-gear"></i>Settings</a></li>
+                <li><a href="{{url_for('auth.logout')}}"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <header>
+            <div class="welcome">
+                <p>Welcome back,</p>
+                <h2>{{name}}</h2>
+            </div>
+            <div class="wallet-section">
+                <div class="wallet-balance" >
+                    <div id="content"><p>Account balance <button><a href="{{url_for('view.deposite')}}"  onclick="sendNotification()" style="text-decoration: none; color: aliceblue;">Deposit</a>
+                    </button> </p></div>
+
+                    <div class="balance-amount">N{{balance}}</div>
+    
+                </div>
+            </div>
+        </header>
+        <!-- Popup container (initially hidden) -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <div id="popupContentPlaceholder"></div>
+            </div>
+        </div>
+        <div class="content">
+            {%block content%}
+            
+            <div class="left-content">
+                <div class="sections">
+                    <div class="section dollar-wallet">
+                        <h3><i class="fa-solid fa-money-check-dollar"></i><br>Dollar Account</h3>
+                        <p>Save in dollars, you've up to 8% pa in dollars</p>
+                        <div class="amount">N{{dollar}}</div>
+                    </div>
+                    <div class="section targets">
+                        <h3><i class="fa-solid fa-circle-dot"></i><br>Savings Account</h3>
+                        <p>Save in dollars, you've up to 8% pa in dollars</p>
+                        <div class="amount">N{{savings}}</div>
+                    </div>
+                    <div class="section safe-lock">
+                        <h3><i class="fa-solid fa-lock"></i><br>Current Account</h3>
+                        <p>Save in dollars, you've up to 8% pa in dollars</p>
+                        <div class="amount">N{{current}}</div>
+                    </div>
+                    <div class="section utilities">
+                        <h3><i class="fa-solid fa-toolbox"></i><br>Utilities</h3>
+                        <p>Save in dollars, you've up to 8% pa in dollars</p>
+                        <div class="amount">N{{utility}}</div>
+                    </div>
+                </div>
+                <div class="transactions">
+                    <h2><i class="fa-solid fa-arrow-right-arrow-left"></i>Transactions</h2>
+                    
+                    
+                
+                    {%for transaction in message%}
+                    <div class="transaction">
+                        <div class="transaction-detail">{{transaction.text}}</div>
+                        <div class="transaction-amount">N{{transaction.deposite_amount}}</div>
+                        <div class="transaction-time">{{transaction.date}}</div>
+                    </div>
+                    {%endfor%}
+
+                    {%for transaction in message2%}
+                    <div class="transaction">
+                        <div class="transaction-detail">{{transaction.text}}</div>
+                        <div class="transaction-amount">N{{transaction.transfer_amount}}</div>
+                        <div class="transaction-time">{{transaction.date}}</div>
+                    </div>
+                    {%endfor%}
+
+
+                    {%for transaction in message3%}
+                    <div class="transaction">
+                        <div class="transaction-detail">{{transaction.text}}</div>
+                        <div class="transaction-amount">-N{{transaction.debit_amount}}</div>
+                        <div class="transaction-time">{{transaction.date}}</div>
+                    </div>
+                    {%endfor%}
+                    
+                    
+                    
+                    <!-- <div class="transaction">
+                        <div class="transaction-detail">Fund wallet to Jackson Botox</div>
+                        <div class="transaction-amount">$10,560.00</div>
+                        <div class="transaction-time">4 hours ago</div>
+                    </div>
+                    <div class="transaction">
+                        <div class="transaction-detail">Transfer to James Brown</div>
+                        <div class="transaction-amount">$289.00</div>
+                        <div class="transaction-time">4th March, 2022 at 05:30 pm</div>
+                    </div>
+                    <div class="transaction">
+                        <div class="transaction-detail">Transfer to James Brown</div>
+                        <div class="transaction-amount">$289.00</div>
+                        <div class="transaction-time">4th March, 2022 at 05:30 pm</div>
+                    </div>
+                    <div class="transaction">
+                        <div class="transaction-detail">Transfer to James Brown</div>
+                        <div class="transaction-amount">$289.00</div>
+                        <div class="transaction-time">4th March, 2022 at 05:30 pm</div>
+                    </div>
+                    <div class="transaction">
+                        <div class="transaction-detail">Transfer to James Brown</div>
+                        <div class="transaction-amount">$289.00</div>
+                        <div class="transaction-time">4th March, 2022 at 05:30 pm</div>
+                    </div>
+                    <div class="transaction">
+                        <div class="transaction-detail">Transfer to James Brown</div>
+                        <div class="transaction-amount">$289.00</div>
+                        <div class="transaction-time">4th March, 2022 at 05:30 pm</div>
+                    </div>
+                    <div class="transaction">
+                        <div class="transaction-detail">Transfer to James Brown</div>
+                        <div class="transaction-amount">$289.00</div>
+                        <div class="transaction-time">4th March, 2022 at 05:30 pm</div>
+                    </div>
+                    <div class="transaction">
+                        <div class="transaction-detail">Transfer to James Brown</div>
+                        <div class="transaction-amount">$289.00</div>
+                        <div class="transaction-time">4th March, 2022 at 05:30 pm</div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="all-expenses">
+                    <h2><i class="fa-solid fa-chart-line"></i>Statistics</h2>
+                    <div class="expenses-chart">
+                        <canvas id="expensesChart"></canvas>
+                    </div>
+                    <div class="expenses-frequency">
+                        <label><input type="radio" name="frequency" value="daily"> Daily</label>
+                        <label><input type="radio" name="frequency" value="weekly"> Weekly</label>
+                        <label><input type="radio" name="frequency" value="monthly" checked> Monthly</label>
+                    </div>
+                </div>
+                <div class="quick-transfer">
+                    <h2><i class="fa-solid fa-money-bill-transfer"></i>Quick Transfer</h2>
+                    <form action="#" method="post">
+                        <input type="text" id="cardNumber" placeholder="Enter Amount" name="amount" required>
+                        <button type="submit" onclick="makeTransfer()" >Make Transfer</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+            {%endblock%}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{url_for('static',filename='js/dashboard.js')}}"></script>
+    <script src="{{url_for('static',filename='js/default_message.js')}}"></script>
+    <script>
+        function sendNotification() {
+          // Set notification data in localStorage
+          localStorage.setItem('notificationMessage', 'Make your deposit here!');
+          
+          // Navigate to the Receiver Page
+          window.location.href = 'deposite.html';
+        }
+        </script>
+</body>
+
+</html>

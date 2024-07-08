@@ -1,0 +1,180 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(192,192,192);
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.navbar {
+    background-color: #3c73d27c;
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-right: 10px;
+    padding-left: 100px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.navbar ul li a:hover {
+    background-color: #ddd;
+}
+
+.content {
+    padding: 20px;
+}
+
+.item {
+    display: inline-block;
+    width: calc(25% - 20px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: #87cefa;
+    padding: 15px;
+    box-shadow: 5px 4px 8px rgb(107, 120, 215);
+    border-radius: 10px;
+}
+
+.item form {
+    padding: 10px;
+    text-align: center;
+}
+
+.item form fieldset {
+    border: none;
+    padding: 0;
+}
+
+.item form legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.item form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.item form input {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.item button {
+    margin-top: 10px;
+    padding: 8px 20px;
+    background-color: #300edb;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.item button:hover {
+    background-color: #45a049;
+}
+
+@media screen and (max-width: 768px) {
+    .item {
+        width: calc(50% - 20px);
+    }
+}
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+    .container {
+        width: 70%;
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .container {
+        width: 90%;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar ul {
+        display: flex;
+        list-style-type: none;
+    }
+
+    .navbar li {
+        margin: 0 10px;
+    }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 600px) and (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+
+    .navbar {
+        display: block;
+    }
+
+    .navbar ul {
+        display: block;
+        list-style-type: none;
+    }
+
+    .navbar li {
+        margin: 5px 0;
+    }
+}
+
+/* Phones */
+@media (max-width: 599px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .navbar {
+        display: block;
+    }
+
+    .navbar ul {
+        display: block;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .navbar li {
+        margin: 5px 0;
+    }
+
+    .header {
+        text-align: center;
+        padding: 10px;
+    }
+}

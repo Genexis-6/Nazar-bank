@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sender Page</title>
+</head>
+<body>
+
+<button onclick="sendNotification()">Send Notification</button>
+
+<script>
+function sendNotification() {
+  // Set notification data in localStorage
+  localStorage.setItem('notificationMessage', 'This is a notification from Sender Page!');
+  
+  // Navigate to the Receiver Page
+  window.location.href = 'user.html';
+}
+</script>
+
+</body>
+</html>
+

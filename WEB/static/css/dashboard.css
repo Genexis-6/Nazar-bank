@@ -1,0 +1,352 @@
+body {
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/background.jpg);
+    display: flex;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.sidebar {
+    width: 170px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.sidebar .logo {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.sidebar .logo img {
+    width: 50px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #bbb;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #333;
+}
+
+.sidebar nav ul li i {
+    margin-right: 10px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 10px;
+}
+
+header {
+    background-color: #e8e7e7;
+    margin-bottom: 5px;
+    position: fixed;
+    padding: 20px;
+    top: 0;
+    border-radius: 2px;
+}
+
+header .welcome p {
+    font-size: 15px;
+    margin: 0;
+}
+
+header .welcome h2 {
+    margin: 0;
+}
+
+.wallet-section {
+    width: 650px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 0;
+    box-shadow:  5px 5px 5px rgb(145, 138, 138);
+}
+
+.wallet-balance p {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.wallet-balance .balance-amount {
+    font-size: 25px;
+    font-weight: 900;
+    margin-left: 10px;
+}
+
+.wallet-balance button {
+    padding: 7px 15px;
+    background: #00aaff;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 12px;
+    margin-left: 400px;
+}
+
+.wallet-balance button:hover {
+    background-color: #007bff;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-content {
+    flex: 2;
+    margin-right: 20px;
+}
+
+.right-content {
+    flex: 1;
+    background: #f9f9f9;
+    padding-top: 20px;
+    border-radius: 10px;
+    width: 300px;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+
+}
+
+.sections {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 190px;
+}
+
+.section {
+    background: #e8e7e7;
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1;
+    margin: 0 5px;
+    text-align: center;
+}
+
+.section h3 {
+    margin-top: 0;
+    font-size: 14px;
+
+}
+
+.sections P {
+    font-size: 10px;
+    text-align: left;
+}
+
+.section .amount {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.sections i {
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.transactions {
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.transactions i {
+    margin-right: 10px;
+}
+
+.transaction {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.transaction .transaction-detail {
+    color: #e4e5f0;
+}
+
+.transaction .transaction-amount {
+    color: #00aaff;
+}
+
+.transaction .transaction-time {
+    color:  #e4e5f0;
+}
+
+.all-expenses {
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    top: 0;
+
+}
+
+.all-expenses h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.all-expenses h2 i {
+    margin-right: 10px;
+}
+
+.all-expenses .expenses-chart {
+    width: 50%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.all-expenses .expenses-frequency {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.all-expenses .expenses-frequency label {
+    margin: 0 10px;
+    color: #333;
+}
+
+.quick-transfer {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.quick-transfer h2 {
+    margin-top: 0;
+}
+
+.quick-transfer h2 i {
+    margin-right: 10px;
+}
+
+.quick-transfer input {
+    padding: 10px;
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.quick-transfer button {
+    padding: 10px 20px;
+    background: #00aaff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#content{
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+#content.fade-out{
+    opacity: 0;
+}
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+    .container {
+        width: 70%;
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .container {
+        width: 90%;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar ul {
+        display: flex;
+        list-style-type: none;
+    }
+
+    .navbar li {
+        margin: 0 10px;
+    }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 600px) and (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+
+    .navbar {
+        display: block;
+    }
+
+    .navbar ul {
+        display: block;
+        list-style-type: none;
+    }
+
+    .navbar li {
+        margin: 5px 0;
+    }
+}
+
+/* Phones */
+@media (max-width: 599px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .navbar {
+        display: block;
+    }
+
+    .navbar ul {
+        display: block;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .navbar li {
+        margin: 5px 0;
+    }
+
+    .header {
+        text-align: center;
+        padding: 10px;
+    }
+}

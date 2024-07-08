@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%}Signup/Login page{%endblock%}</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/message.css')}}">
+</head>
+<!-- USHI EWERE WISDOM -->
+
+<body>
+    <div class="main">
+        <a href="index.html"><img src="{{url_for('static',filename='images/Logo.png')}}" alt="logo"></a>
+    <div class="container">
+
+        <div class="form-box">
+            <div class="flash-container">
+                {%for msg in get_flashed_messages()%}
+                <div class="flash-message">
+                    <p class="flash-error">{{msg}}</p>
+                </div>
+                {%endfor%}
+            </div>
+
+            <header>
+                <h1 class="title">{%block a%}Log In{%endblock%}</h1>
+            </header>
+
+
+
+            {%block content%}
+
+            {%endblock%}
+
+        </div>
+    </div>
+    </div>
+    
+    <script src="{{url_for('static', filename='js/message.js')}}"></script>
+    
+</body>
+</html>

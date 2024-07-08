@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nazar bank</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bank.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bank2.css')}}">
+</head>
+<!-- ONYEMAECHI EBUBE DESTINY -->
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><img src="{{url_for('static',filename = 'images/images/nazar logo.jpg')}}" alt="" style="height: 100px; width: 100px;"></div>
+            <div class="nav-links">
+                <a href="#">Features</a>
+                <a href="#">Contact us</a><!-- ONYEMAECHI EBUBE DESTINY -->
+            </div>
+            <div class="buttons">
+                <button class="sign-in"><a href="{{url_for('auth.login')}}">Sign in</a></button>
+                <button class="register"><a href="{{url_for('auth.register')}}" style="text-decoration: none; color: aliceblue;">Register</a></button>
+            </div>
+        </div>
+<div class="second">
+    <div class="section">
+        <div class="content">
+            <h1>A New Way to Live</h1>
+            <h2>Save. Invest. Borrow. Transact.</h2><!-- ONYEMAECHI EBUBE DESTINY -->
+            <p>Nazar bank is a 100% digital banking app brought to you by Odec tech. You can open an account, send and receive money, invest and borrow across multiple devices.</p>
+            <div class="buttons">
+                <button class="get-started" ><a href="{{url_for('auth.register')}}">Get Started</a></button>
+                <button class="sign-in"><a href="{{url_for('auth.login')}}">Sign In</a></button>
+            </div>
+            <div class="app-buttons">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+                <img src="https://www.bing.com/images/blob?bcid=RHDp.SlyLCIHJvTk2bF3rgWHLztL.....w8" alt="web-app-icon">
+            </div>
+        </div>
+        <div class="image">
+            <img src="{{url_for('static',filename = 'images/images/credit-card-2151588_1280.png')}}" alt="nazar bank">
+        </div>
+    </div>
+
+   
+
+<div class="container">
+    <h2 class="section-title">Features & Benefits</h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <img src="{{url_for('static',filename = 'images/images/work-4997565_1280.png')}}" alt="Self Onboarding">
+            <h3>Self Onboarding</h3>
+            <p>Create an account from the comfort of your mobile phone or laptop.</p>
+        </div><!-- ONYEMAECHI EBUBE DESTINY -->
+        <div class="feature-card">
+            <img src="{{url_for('static', filename = 'images/images/cloud-computing-1989339_1280.png')}}" alt="Airtime and Data">
+            <h3>Airtime and Data</h3>
+            <p>Buy airtime and data for yourself and others without stress.</p>
+        </div>
+        <div class="feature-card">
+            <img src="{{url_for('static',filename = 'images/images/dollar-bill-6183374_1280.png')}}" alt="Bills">
+            <h3>Bills</h3>
+            <p>Pay for airline tickets, cable, and internet subscriptions with ease.</p><!-- ONYEMAECHI EBUBE DESTINY -->
+        </div>
+        <div class="feature-card">
+            <img src="{{url_for('static', filename = 'images/images/bank-1295580_1280.png')}}" alt="Savings">
+            <h3>Savings</h3>
+            <p>Enjoy up to 60% returns on your Naira and Dollar investments on Double.</p>
+        </div>
+        <div class="feature-card">
+            <img src="{{url_for('static',filename = 'images/images/marketing-4646598_1280.png')}}" alt="Loans">
+            <h3>Loans</h3>
+            <p>Enjoy quick loans of up to 5 million in 5 minutes or less.</p>
+        </div>
+        <div class="feature-card">
+            <img src="{{url_for('static', filename = 'images/images/online-shopping-6567977_1280.png')}}" alt="Cards">
+            <h3>Cards</h3>
+            <p>Request a debit card and have it delivered to your home or office.</p>
+        </div>
+        <div class="feature-card">
+            <img src="{{url_for('static',filename = 'images/images/business-7136282_1280.png')}}" alt="Foreign Transfers">
+            <h3>Foreign Transfers</h3>
+            <p>You can transfer money from your account to anywhere around the world in minutes.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+<section id="more-for-you">
+    <h2>More For You</h2>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="{{url_for('static',filename = 'images/images/customer-3864809_1280.jpg')}}" alt="Specta">
+            <div class="text">Specta</div>
+        </div><!-- ONYEMAECHI EBUBE DESTINY -->
+        <div class="mySlides fade">
+            <img src="{{url_for('static',filename = 'images/images/feedback-8632282_1280.jpg')}}" alt="Doubble">
+            <div class="text">Doubble</div>
+        </div>
+    </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot"></span> <!-- ONYEMAECHI EBUBE DESTINY -->
+        <span class="dot"></span> 
+    </div>
+</section>
+
+<section id="testimonials">
+    <h2>What Customers Say About Us</h2>
+    <div class="testimonial">
+        <p>"Wow, This app is really nice. From the first time I signed up I never believed it could be this effective in making my life easier. I can save, borrow and invest on the same app it is really cool."</p>
+        <p><strong>Odec Clem</strong></p>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h3>NazarBank</h3>
+            <p>Company</p>
+            <p>Features</p>
+            <p>Terms & Conditions</p>
+            <p>Privacy Policy</p>
+        </div>
+        <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <p>University of delta state agbor</p>
+            <p>Email: odecclem@gmail.com</p>
+            <p>Phone: 09152080837</p>
+            <p>Phone: (+234) 09165911611</p>
+            <p>Phone: 01-4484481</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024, Nazar Bank Plc. Licensed & regulated by the Central Bank of Nigeria</p><!-- ONYEMAECHI EBUBE DESTINY -->
+    </div>
+</footer>
+
+<script src="{{url_for('static',filename = 'js/bank.js')}}"></script><!-- ONYEMAECHI EBUBE DESTINY -->
+</header>
+</body>
+</html>

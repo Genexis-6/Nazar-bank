@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nazar Bank - Deposit</title>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/deposite.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/default_message.css')}}">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="{{url_for('static', filename = 'images/logo.png')}}" alt="Nazar Bank Logo"> Nazar Bank
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{url_for('view.userDash')}}"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="{{url_for('view.deposite')}}">Deposit</a></li>
+                <li><a href="{{url_for('view.Transac')}}">Transfer</a></li>
+                <li><a href="#"><i class="fa-solid fa-credit-card"></i> Cards</a></li>
+                <li><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="{{url_for('auth.logout')}}"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <section class="transaction">
+            <h2>Deposit Funds</h2>
+            <form id="deposit-form" action="#" method="post">
+                <label for="deposit-amount">Account Number:</label>
+                <input type="text" name="accnum" value={{accnum}} readonly>
+                <label for="deposit-amount">Select Account:</label>
+                            
+                    <select name="depositeType" id="">
+                        <option value="Dollar" >Dollar</option>
+                        <option value="Utility">Utility</option>
+                        <option value="Savings">Savings</option>
+                        <option value="Current">Current</option>
+                    </select>
+        
+                <label for="deposit-amount">Amount:</label>
+                <input type="number" inputmode="numeric" id="deposit-amount" name="amount" min="100" max="999999" placeholder="N  100.00-999,999.00" required>
+
+                <label for="deposit-method">Deposit Method:</label>
+                <select id="deposit-method" name="deposit-method">
+                    <option value="bank-transfer">Bank Transfer</option>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                </select>
+
+                <button type="submit">Deposit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Nazar Bank. All rights reserved.</p>
+    </footer>
+    <script src="{{url_for('static', filename = 'js/ap.js')}}"></script>
+    <script src="{{url_for('static', filename = 'js/default_message.js')}}"></script>
+</body>
+</html>
+
+
+

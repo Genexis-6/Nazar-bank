@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+{%block a%}Sign up{%endblock%}
+{%block content%}
+
+
+
+<form action="#" method="post">
+    <input type="text" placeholder="Full Name" name="name" value="{{name}}"/>
+    <input type="text" placeholder="User Name"name="username"  value="{{username}}"/>
+    <input type="email" placeholder="Email Address" name="email" value="{{email}}"/>
+    <input type="text" placeholder="Phone Number" name="phone" value="{{phone}}"/>
+    <input type="password" placeholder="Password" name="password" value="{{password}}"/>
+    <input type="password" placeholder="Confirm Password" name="confirm_pass" value=""/>
+    <input type="submit" value="Sign up" class="btn" />
+    <p>Don't have an account? <a href="{{url_for('auth.login')}}">GO Back To Login</a></p>
+</form>
+{%endblock%}

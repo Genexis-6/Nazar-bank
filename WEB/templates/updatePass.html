@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{%block a%}Update Password{%endblock%}
+{%block content%}
+
+
+
+<form action="#" method="post">
+    <input type="text" placeholder="Full Name" name="name" value="{{name}}"readonly/>
+    <input type="text" placeholder="User Name"name="username"  value="{{username}}"readonly/>
+    <input type="email" placeholder="Email Address" name="email" value="{{email}}"readonly/>
+    <input type="text" placeholder="Phone Number" name="phone" value="{{phone}}"readonly/>
+    <input type="password" placeholder="Password" name="password" value=""/>
+    <input type="password" placeholder="Confirm Password" name="confirm_pass" value=""/>
+    <input type="submit" value="Sign up" class="btn" />
+</form>
+{%endblock%}

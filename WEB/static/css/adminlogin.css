@@ -1,0 +1,119 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+.login-form {
+    width: 300px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid #c4c4c4;
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.2);
+}
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.login-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.login-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+.login-form input[type="submit"]:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.4);
+}
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+    .container {
+        width: 70%;
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .container {
+        width: 90%;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar ul {
+        display: flex;
+        list-style-type: none;
+    }
+
+    .navbar li {
+        margin: 0 10px;
+    }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 600px) and (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+
+    .navbar {
+        display: block;
+    }
+
+    .navbar ul {
+        display: block;
+        list-style-type: none;
+    }
+
+    .navbar li {
+        margin: 5px 0;
+    }
+}
+
+/* Phones */
+@media (max-width: 599px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .navbar {
+        display: block;
+    }
+
+    .navbar ul {
+        display: block;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .navbar li {
+        margin: 5px 0;
+    }
+
+    .header {
+        text-align: center;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.o">
+    <!-- ONYESOM EBUKA EMMANUEL -->
+    <title>Virtual Credit Card Design</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/card.css')}}">
+</head>
+<body>
+<!--ONYESOM EBUKA EMMANUEL
+    SOFTWARE ENGINEERING
+    CMP2203704 GROUP B
+    D1004576
+    FACULTY OF COMPUTING
+-->
+    <div class="container">
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">
+                <img src="https://i.ibb.co/PYss3yv/map.png" class="map-img">
+                <div class="row">
+                    <img src="https://i.ibb.co/G9pDnYJ/chip.png" width="60px">
+                    <img src="https://i.ibb.co/WHZ3nRJ/visa.png" width="60px">
+                </div>
+                <div class="row card-no">
+                    {{account}}
+                </div>
+                <!-- ONYESOM EBUKA EMMANUEL -->
+                <div class="row card-holder">
+                    <p>CARD HOLDER</p>
+                    <p>VALID TILL</p>
+                </div>
+                <div class="row name">
+                    <p>{{name}}</p>
+                    <p>10 / 25</p>
+                </div>
+            </div><!-- ONYESOM EBUKA EMMANUEL -->
+            <div class="back">
+                <img src="https://i.ibb.co/PYss3yv/map.png" class="map-img">
+                <div class="bar"></div>
+                <div class="row card-cvv">
+                    <div>
+                        <img src="https://i.ibb.co/S6JG8px/pattern.png">
+                    </div>
+                    <p>824</p>
+                </div>
+                <div class="row card-text">
+                    <p>this is a virtual card design using HTML and CSS. You can aslo design something like this.</p>
+                </div>
+                <div class="row signature">
+                    <p>CUSTOMER SIGNATURE</p>
+                    <img src="https://i.ibb.co/WHZ3nRJ/visa.png" width="80px"><!-- ONYESOM EBUKA EMMANUEL -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

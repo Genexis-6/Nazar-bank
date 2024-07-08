@@ -1,0 +1,91 @@
+
+.flash-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10 20px;
+    border-radius: 5px;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: none;
+}
+
+.flash-success {background-color: #28a754;border-left: 5px solid #218838;}
+.flash-danger {background-color: #dc3545; border-left: 5px solid #c82333;}
+.flash-info {background-color: #17a2b8;   border-left: 5px solid #139684;}
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+    .container {
+        width: 70%;
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .container {
+        width: 90%;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar ul {
+        display: flex;
+        list-style-type: none;
+    }
+
+    .navbar li {
+        margin: 0 10px;
+    }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 600px) and (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+
+    .navbar {
+        display: block;
+    }
+
+    .navbar ul {
+        display: block;
+        list-style-type: none;
+    }
+
+    .navbar li {
+        margin: 5px 0;
+    }
+}
+
+/* Phones */
+@media (max-width: 599px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .navbar {
+        display: block;
+    }
+
+    .navbar ul {
+        display: block;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .navbar li {
+        margin: 5px 0;
+    }
+
+    .header {
+        text-align: center;
+        padding: 10px;
+    }
+}
